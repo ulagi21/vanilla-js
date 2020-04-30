@@ -1,25 +1,21 @@
-const monday = "Mon";
-const tue = "Tue";
-const wed = "Wed";
-const thu = "Thu";
-const fri = "Fri";
+const title = document.querySelector("#title");
 
-console.log(monday, tue, wed, thu, fri);
+const CLICKED_CLASS = "clicked";
 
-const ryuInfo = ["Ryu", "35", true, "Seoul"];
+// function handleClick() {
+//   const hasClass = title.classList.contains(CLICKED_CLASS);
+//   if (hasClass) {
+//     title.classList.remove(CLICKED_CLASS);
+//   } else {
+//     title.classList.add(CLICKED_CLASS);
+//   }
+// }
 
-console.log(ryuInfo);
+function handleClick() {
+  title.classList.toggle(CLICKED_CLASS);
+}
 
-const ikhyunInfo = {
-  name: "Ikhyun",
-  age: 35,
-  gender: "Male",
-  isHandsome: true,
-  favMovies: ["Sound of Music", "Love Acually"],
-  favFood: [
-    { first: "agg", fatty: false },
-    { secend: "kimghi", fatty: false },
-  ],
-};
-
-console.log(ikhyunInfo.favFood[1].fatty);
+function init() {
+  title.addEventListener("click", handleClick);
+}
+init();
